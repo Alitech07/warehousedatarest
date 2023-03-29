@@ -1,5 +1,6 @@
 package com.warehousedatarest.entity;
 
+import com.warehousedatarest.entity.template.AbsEntity;
 import jakarta.annotation.security.DenyAll;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,10 +15,5 @@ import lombok.NonNull;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Measurement {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    private String name;
-    private boolean active;
+public class Measurement extends AbsEntity {
 }

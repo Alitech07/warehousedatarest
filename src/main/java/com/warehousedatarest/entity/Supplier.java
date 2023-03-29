@@ -1,5 +1,6 @@
 package com.warehousedatarest.entity;
 
+import com.warehousedatarest.entity.template.AbsEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,12 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Supplier {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    private String name;
-    private boolean active;
+public class Supplier extends AbsEntity {
     @Column(unique = true,nullable = false)
     private String phoneNumber;
 }

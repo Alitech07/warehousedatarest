@@ -22,6 +22,8 @@ public class Input {
     private Supplier supplier;
     @ManyToOne
     private Currency currency;
+    @Column(nullable = false)
     private String fucture_number;
+    @Column(nullable = false,unique = true)
     private String code;
 }

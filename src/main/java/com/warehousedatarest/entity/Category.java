@@ -1,5 +1,6 @@
 package com.warehousedatarest.entity;
 
+import com.warehousedatarest.entity.template.AbsEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,13 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Category {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    @Column(nullable = false)
-    private String name;
+public class Category extends AbsEntity {
     @ManyToOne
     private Category category;
-    private boolean active;
 }

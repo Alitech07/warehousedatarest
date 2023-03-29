@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Set;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -22,4 +24,7 @@ public class User {
     private String code;
     private String password;
     private boolean active;
+
+    @ManyToMany
+    private Set<Warehouse> warehouse;
 }

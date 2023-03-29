@@ -1,5 +1,6 @@
 package com.warehousedatarest.entity;
 
+import com.warehousedatarest.entity.template.AbsEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,12 +12,5 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Warehouse {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    private String name;
-    @ManyToMany
-    private List<User> users;
-    private boolean active;
+public class Warehouse extends AbsEntity {
 }
